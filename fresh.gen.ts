@@ -11,8 +11,10 @@ import * as $3 from "./routes/index.tsx";
 import * as $$0 from "./islands/LiveControls.tsx";
 import * as $$$0 from "./sections/GetStarted.tsx";
 import * as $$$1 from "./sections/Head.tsx";
-import * as $$$2 from "./sections/Markdown.tsx";
-import * as $$$3 from "./sections/QuillText.tsx";
+import * as $$$2 from "./sections/Header.tsx";
+import * as $$$3 from "./sections/ImageWithText.tsx";
+import * as $$$4 from "./sections/Markdown.tsx";
+import * as $$$5 from "./sections/QuillText.tsx";
 import * as $$$$0 from "./functions/LoadGitHubRaw.ts";
 
 const manifest: DecoManifest = {
@@ -26,8 +28,10 @@ const manifest: DecoManifest = {
   sections: {
     "./sections/GetStarted.tsx": $$$0,
     "./sections/Head.tsx": $$$1,
-    "./sections/Markdown.tsx": $$$2,
-    "./sections/QuillText.tsx": $$$3,
+    "./sections/Header.tsx": $$$2,
+    "./sections/ImageWithText.tsx": $$$3,
+    "./sections/Markdown.tsx": $$$4,
+    "./sections/QuillText.tsx": $$$5,
   },
   functions: { "./functions/LoadGitHubRaw.ts": $$$$0 },
   schemas: {
@@ -93,6 +97,134 @@ const manifest: DecoManifest = {
           "faviconUrl",
           "styleUrls",
           "themeColor",
+        ],
+      },
+      "outputSchema": null,
+    },
+    "./sections/Header.tsx": {
+      "inputSchema": {
+        "title": " Header",
+        "type": "object",
+        "properties": {
+          "logo": {
+            "title": "Logo",
+            "type": "object",
+            "properties": {
+              "image": {
+                "format": "image-uri",
+                "type": "string",
+                "title": "Image",
+              },
+              "altText": {
+                "type": "string",
+                "title": "Alt Text",
+              },
+            },
+            "required": [
+              "image",
+              "altText",
+            ],
+          },
+          "menu": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "text": {
+                  "type": "string",
+                  "title": "Text",
+                },
+                "link": {
+                  "type": "string",
+                  "title": "Link",
+                },
+              },
+              "required": [
+                "text",
+                "link",
+              ],
+            },
+            "title": "Menu",
+          },
+        },
+        "required": [
+          "logo",
+          "menu",
+        ],
+      },
+      "outputSchema": null,
+    },
+    "./sections/ImageWithText.tsx": {
+      "inputSchema": {
+        "title": " Image With Text",
+        "type": "object",
+        "properties": {
+          "subTitle": {
+            "type": [
+              "string",
+              "null",
+            ],
+            "title": "Sub Title",
+          },
+          "title": {
+            "type": "string",
+            "title": "Title",
+          },
+          "text": {
+            "type": "string",
+            "title": "Text",
+          },
+          "imagePosition": {
+            "type": "string",
+            "anyOf": [
+              {
+                "type": "string",
+                "const": "left",
+              },
+              {
+                "type": "string",
+                "const": "right",
+              },
+            ],
+            "title": "Image Position",
+          },
+          "image": {
+            "format": "image-uri",
+            "type": "string",
+            "title": "Image",
+          },
+          "imageDecoration": {
+            "format": "image-uri",
+            "type": "string",
+            "title": "Image Decoration",
+          },
+          "button": {
+            "title": "Button",
+            "type": "object",
+            "properties": {
+              "text": {
+                "type": "string",
+                "title": "Text",
+              },
+              "link": {
+                "type": [
+                  "string",
+                  "null",
+                ],
+                "title": "Link",
+              },
+            },
+            "required": [
+              "text",
+            ],
+          },
+        },
+        "required": [
+          "title",
+          "text",
+          "image",
+          "imageDecoration",
+          "button",
         ],
       },
       "outputSchema": null,

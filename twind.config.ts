@@ -10,10 +10,12 @@ export default {
         "2xl": "1536px",
       },
       colors: {
-        primary: "#2FD180",
-        "primary-dark": "#003232",
-        "primary-light": "#C5FFE9",
+        primary: "#0E649F",
+        "secondary": "#00B030",
         transparent: "transparent",
+        "white": "white",
+        "gray": "#707070",
+        "black": "black"
       },
       fontFamily: {
         sans: ["Albert Sans", "sans-serif"],
