@@ -15,19 +15,19 @@ export default function ImageWithText(
   { subTitle, title, text, imagePosition, image, button, imageDecoration }: Props,
 ) {
   const commonCss =
-    "flex flex-col items-center md:flex-row m-auto gap-5 md:gap-10 lg:gap-12 mt-14";
+    "flex flex-col items-center md:flex-row m-auto gap-5 md:gap-10 lg:gap-12 mt-14 mb-[200px]";
   const cssRight = commonCss + " md:flex-row-reverse ";
   const cssLeft = commonCss + " md:flex-row";
 
   return (
-    <div class={imagePosition == "right" ? cssRight : cssLeft}>
-      <div class={`flex items-center w-[90%] rounded-lg lg:w-full h-[380px] md:h-[550px] overflow-hidden ${imagePosition == "right" ? "ml-auto rounded-tl-[400px] rounded-bl-[400px]" : "mr-auto rounded-tr-[400px] rounded-br-[400px]"}`}>
-        <picture class="inset-0 h-full">
+    <div id="atuacao" class={imagePosition == "right" ? cssRight : cssLeft}>
+      <div class={`flex items-center w-[90%] rounded-lg lg:w-full h-[380px] md:h-[550px] uw:h-[700px] overflow-hidden ${imagePosition == "right" ? "ml-auto rounded-tl-[400px] rounded-bl-[400px]" : "mr-auto rounded-tr-[400px] rounded-br-[400px]"}`}>
+        <picture class="inset-0 h-full flex justify-center items-center">
           <source
             srcset={image}
           />
           <Image
-            class="object-cover inset-0 w-full h-full"
+            class="object-cover inset-0 w-full h-full md:h-auto"
             sizes="(max-width: 640px) 75vw, 50vw"
             src={image}
             width={200}
@@ -39,10 +39,10 @@ export default function ImageWithText(
         <h4 class="text-secondary uppercase text-[12px] md:text-[18px] font-bold text-left mb-2 md:mb-[30px]">
             {subTitle}
         </h4>
-        <h3 class="w-full text-primary text-left font-bold text-3xl md:text-[38px] md:w-[150px]">
+        <h3 class="w-full text-primary text-left font-semibold text-[22px] md:text-[38px] md:w-[150px]">
           {title}
         </h3>
-        <p class="text-left text-gray text-[16px] md:text-lg md:text-2xl my-3 md:mt-[20px] md:mb-[30px]">
+        <p class="text-left text-gray text-[14px] md:text-lg md:text-2xl my-3 md:mt-[20px] md:mb-[30px]">
           {text}
         </p>
         <a className="flex items-center bg-secondary px-[20px] rounded-[30px] uppercase text-white text-[12px] md:text-[16px] font-bold h-[40px] md:h-[50px]" href={button.link}>{button.text}</a>

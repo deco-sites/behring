@@ -9,12 +9,15 @@ import * as $1 from "./routes/_app.tsx";
 import * as $2 from "./routes/_middleware.ts";
 import * as $3 from "./routes/index.tsx";
 import * as $$0 from "./islands/LiveControls.tsx";
+import * as $$1 from "./islands/Slider.tsx";
 import * as $$$0 from "./sections/GetStarted.tsx";
-import * as $$$1 from "./sections/Head.tsx";
-import * as $$$2 from "./sections/Header.tsx";
-import * as $$$3 from "./sections/ImageWithText.tsx";
-import * as $$$4 from "./sections/Markdown.tsx";
-import * as $$$5 from "./sections/QuillText.tsx";
+import * as $$$1 from "./sections/GradientSection.tsx";
+import * as $$$2 from "./sections/Head.tsx";
+import * as $$$3 from "./sections/Header.tsx";
+import * as $$$4 from "./sections/ImageWithText.tsx";
+import * as $$$5 from "./sections/MainCarousel.tsx";
+import * as $$$6 from "./sections/Markdown.tsx";
+import * as $$$7 from "./sections/QuillText.tsx";
 import * as $$$$0 from "./functions/LoadGitHubRaw.ts";
 
 const manifest: DecoManifest = {
@@ -24,14 +27,16 @@ const manifest: DecoManifest = {
     "./routes/_middleware.ts": $2,
     "./routes/index.tsx": $3,
   },
-  islands: { "./islands/LiveControls.tsx": $$0 },
+  islands: { "./islands/LiveControls.tsx": $$0, "./islands/Slider.tsx": $$1 },
   sections: {
     "./sections/GetStarted.tsx": $$$0,
-    "./sections/Head.tsx": $$$1,
-    "./sections/Header.tsx": $$$2,
-    "./sections/ImageWithText.tsx": $$$3,
-    "./sections/Markdown.tsx": $$$4,
-    "./sections/QuillText.tsx": $$$5,
+    "./sections/GradientSection.tsx": $$$1,
+    "./sections/Head.tsx": $$$2,
+    "./sections/Header.tsx": $$$3,
+    "./sections/ImageWithText.tsx": $$$4,
+    "./sections/MainCarousel.tsx": $$$5,
+    "./sections/Markdown.tsx": $$$6,
+    "./sections/QuillText.tsx": $$$7,
   },
   functions: { "./functions/LoadGitHubRaw.ts": $$$$0 },
   schemas: {
@@ -49,6 +54,87 @@ const manifest: DecoManifest = {
           },
         },
         "required": [],
+      },
+      "outputSchema": null,
+    },
+    "./sections/GradientSection.tsx": {
+      "inputSchema": {
+        "title": " Gradient Section",
+        "type": "object",
+        "properties": {
+          "part1": {
+            "title": "Part1",
+            "type": "object",
+            "properties": {
+              "text": {
+                "type": "string",
+                "title": "Text",
+              },
+              "button": {
+                "title": "Button",
+                "type": "object",
+                "properties": {
+                  "text": {
+                    "type": [
+                      "string",
+                      "null",
+                    ],
+                    "title": "Text",
+                  },
+                  "link": {
+                    "type": [
+                      "string",
+                      "null",
+                    ],
+                    "title": "Link",
+                  },
+                },
+                "required": [],
+              },
+            },
+            "required": [
+              "text",
+            ],
+          },
+          "part2": {
+            "title": "Part2",
+            "type": "object",
+            "properties": {
+              "text": {
+                "type": "string",
+                "title": "Text",
+              },
+              "button": {
+                "title": "Button",
+                "type": "object",
+                "properties": {
+                  "text": {
+                    "type": [
+                      "string",
+                      "null",
+                    ],
+                    "title": "Text",
+                  },
+                  "link": {
+                    "type": [
+                      "string",
+                      "null",
+                    ],
+                    "title": "Link",
+                  },
+                },
+                "required": [],
+              },
+            },
+            "required": [
+              "text",
+            ],
+          },
+        },
+        "required": [
+          "part1",
+          "part2",
+        ],
       },
       "outputSchema": null,
     },
@@ -225,6 +311,59 @@ const manifest: DecoManifest = {
           "image",
           "imageDecoration",
           "button",
+        ],
+      },
+      "outputSchema": null,
+    },
+    "./sections/MainCarousel.tsx": {
+      "inputSchema": {
+        "title": " Main Carousel",
+        "type": "object",
+        "properties": {
+          "content": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "title": {
+                  "type": "string",
+                  "title": "Title",
+                },
+                "button": {
+                  "title": "Button",
+                  "type": "object",
+                  "properties": {
+                    "text": {
+                      "type": "string",
+                      "title": "Text",
+                    },
+                    "link": {
+                      "type": "string",
+                      "title": "Link",
+                    },
+                  },
+                  "required": [
+                    "text",
+                    "link",
+                  ],
+                },
+                "image": {
+                  "format": "image-uri",
+                  "type": "string",
+                  "title": "Image",
+                },
+              },
+              "required": [
+                "title",
+                "button",
+                "image",
+              ],
+            },
+            "title": "Content",
+          },
+        },
+        "required": [
+          "content",
         ],
       },
       "outputSchema": null,
