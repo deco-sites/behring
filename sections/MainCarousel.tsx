@@ -16,7 +16,7 @@ export default function MainCarousel({content}: Props){
     const id = useId();
     
     return(
-        <section class="px-[10vw]">
+        <section class="px-[10vw] h-[145vw]">
             <div id={id} class="relative overflow-hidden">
                 <div class={`flex justify-between transition w-[${content.length * 100}%]`} data-slider-content>
                     {content.map((content, idx) => {
@@ -28,7 +28,7 @@ export default function MainCarousel({content}: Props){
                                 </div>
                                 <div class="w-full md:w-[30%] text-left md:text-right mt-[50px] md:mt-0">
                                     <h2 class="text-primary text-[22px] md:text-[32px] font-semibold mb-5">{content.title}</h2>
-                                    <span class="block text-secondary uppercase font-semibold border-b-1 border-secondary w-max ml-auto">{content.button.text}</span>
+                                    <span class="block text-secondary uppercase font-semibold border-b-1 border-secondary w-max mr-auto md:ml-auto">{content.button.text}</span>
                                 </div>
                             </a>
                         )
