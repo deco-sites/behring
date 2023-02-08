@@ -21,6 +21,7 @@ export default function HeadComponent({
 }: Props) {
   return (
     <Head>
+      <link rel="preload" as="image" href="https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/500/c36b50eb-a9d9-4ff9-9695-5ce36d59b2d6" />
       <title>{title}</title>
       <meta name="theme-color" content={themeColor}></meta>
       <meta name="description" content={description} />
