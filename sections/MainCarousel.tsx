@@ -15,7 +15,7 @@ export default function MainCarousel({ content }: Props) {
   const id = useId();
 
   return (
-    <section class="px-[10vw] h-[145vw] md:h-auto">
+    <section class="px-[10vw] h-[145vw] md:h-auto pt-[120px]">
       <div id={id} class="relative overflow-hidden">
         <div
           class={`flex justify-between transition w-[${content.length * 100}%]`}

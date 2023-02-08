@@ -10,7 +10,7 @@ export interface Props {
 
 export default function GetStarted({ logo, menu }: Props) {
   return (
-    <header class=" py-4">
+    <header class="w-full fixed bg-white py-3 z-50">
       <div class="flex text-white justify-between items-center h-[76px] md:px-[10vw] m-auto">
         <div class="ml-[40px] md:ml-0">
           <a href="/">
@@ -19,7 +19,7 @@ export default function GetStarted({ logo, menu }: Props) {
                 class=""
                 src={logo.image}
                 alt={logo.altText}
-                width={151}
+                width={152}
                 height={44}
               />
             </picture>
@@ -88,7 +88,7 @@ export default function GetStarted({ logo, menu }: Props) {
               </path>
             </svg>
           </summary>
-          <nav class="block md:hidden fixed h-[100vh] w-[100vw] left-0 right-0 bg-primary z-10 top-[108px] p-10">
+          <nav class="block md:hidden fixed h-[100vh] w-[100vw] left-0 right-0 bg-primary z-50 top-[100px] p-10">
             <ul class="flex flex-col justify-items-start items-start text-[14px]">
               {menu.map((menu, idx) => {
                 return (
