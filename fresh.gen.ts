@@ -8,16 +8,19 @@ import * as $0 from "./routes/[...catchall].tsx";
 import * as $1 from "./routes/_app.tsx";
 import * as $2 from "./routes/_middleware.ts";
 import * as $3 from "./routes/index.tsx";
-import * as $$0 from "./islands/LiveControls.tsx";
-import * as $$1 from "./islands/Slider.tsx";
-import * as $$$0 from "./sections/GetStarted.tsx";
-import * as $$$1 from "./sections/GradientSection.tsx";
-import * as $$$2 from "./sections/Head.tsx";
-import * as $$$3 from "./sections/Header.tsx";
-import * as $$$4 from "./sections/ImageWithText.tsx";
-import * as $$$5 from "./sections/MainCarousel.tsx";
-import * as $$$6 from "./sections/Markdown.tsx";
-import * as $$$7 from "./sections/QuillText.tsx";
+import * as $$0 from "./islands/GradientAnimation.tsx";
+import * as $$1 from "./islands/LiveControls.tsx";
+import * as $$2 from "./islands/MidContentAnimation.tsx";
+import * as $$3 from "./islands/Slider.tsx";
+import * as $$$0 from "./sections/Footer.tsx";
+import * as $$$1 from "./sections/GetStarted.tsx";
+import * as $$$2 from "./sections/GradientSection.tsx";
+import * as $$$3 from "./sections/Head.tsx";
+import * as $$$4 from "./sections/Header.tsx";
+import * as $$$5 from "./sections/ImageWithText.tsx";
+import * as $$$6 from "./sections/MainCarousel.tsx";
+import * as $$$7 from "./sections/Markdown.tsx";
+import * as $$$8 from "./sections/QuillText.tsx";
 import * as $$$$0 from "./functions/LoadGitHubRaw.ts";
 
 const manifest: DecoManifest = {
@@ -27,19 +30,93 @@ const manifest: DecoManifest = {
     "./routes/_middleware.ts": $2,
     "./routes/index.tsx": $3,
   },
-  islands: { "./islands/LiveControls.tsx": $$0, "./islands/Slider.tsx": $$1 },
+  islands: {
+    "./islands/GradientAnimation.tsx": $$0,
+    "./islands/LiveControls.tsx": $$1,
+    "./islands/MidContentAnimation.tsx": $$2,
+    "./islands/Slider.tsx": $$3,
+  },
   sections: {
-    "./sections/GetStarted.tsx": $$$0,
-    "./sections/GradientSection.tsx": $$$1,
-    "./sections/Head.tsx": $$$2,
-    "./sections/Header.tsx": $$$3,
-    "./sections/ImageWithText.tsx": $$$4,
-    "./sections/MainCarousel.tsx": $$$5,
-    "./sections/Markdown.tsx": $$$6,
-    "./sections/QuillText.tsx": $$$7,
+    "./sections/Footer.tsx": $$$0,
+    "./sections/GetStarted.tsx": $$$1,
+    "./sections/GradientSection.tsx": $$$2,
+    "./sections/Head.tsx": $$$3,
+    "./sections/Header.tsx": $$$4,
+    "./sections/ImageWithText.tsx": $$$5,
+    "./sections/MainCarousel.tsx": $$$6,
+    "./sections/Markdown.tsx": $$$7,
+    "./sections/QuillText.tsx": $$$8,
   },
   functions: { "./functions/LoadGitHubRaw.ts": $$$$0 },
   schemas: {
+    "./sections/Footer.tsx": {
+      "inputSchema": {
+        "title": " Footer",
+        "type": "object",
+        "properties": {
+          "aboutUs": {
+            "type": "string",
+            "title": "About Us",
+          },
+          "menu": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "title": {
+                  "type": "string",
+                  "title": "Title",
+                },
+                "link": {
+                  "type": "string",
+                  "title": "Link",
+                },
+                "submenu": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "text": {
+                        "type": [
+                          "string",
+                          "null",
+                        ],
+                        "title": "Text",
+                      },
+                      "link": {
+                        "type": [
+                          "string",
+                          "null",
+                        ],
+                        "title": "Link",
+                      },
+                    },
+                    "required": [],
+                  },
+                  "title": "Submenu",
+                },
+              },
+              "required": [
+                "title",
+                "link",
+              ],
+            },
+            "title": "Menu",
+          },
+          "logo": {
+            "format": "image-uri",
+            "type": "string",
+            "title": "Logo",
+          },
+        },
+        "required": [
+          "aboutUs",
+          "menu",
+          "logo",
+        ],
+      },
+      "outputSchema": null,
+    },
     "./sections/GetStarted.tsx": {
       "inputSchema": {
         "title": " Get Started",

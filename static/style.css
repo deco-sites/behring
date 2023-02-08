@@ -32,3 +32,35 @@ summary {
 #verde #gradient{
   background: linear-gradient(90deg, #005D2B, #00B030);
 }
+
+#verde #gradient::after{
+  content: '';
+  display: block;
+  width: 45vh;
+  height: 45vh;
+  position: absolute;
+  top: 0;
+  right: -22.5vh;
+  background-image: url(/bolaverde.png);
+  background-repeat: no-repeat;
+  background-position: top left;
+  background-size: auto 100%;
+}
+
+#azul #gradient::after{
+  content: '';
+  display: block;
+  width: 45vh;
+  height: 45vh;
+  position: absolute;
+  top: 0;
+  right: -22.5vh;
+  background-image: url(/bolaazul.png);
+  background-repeat: no-repeat;
+  background-position: top left;
+  background-size: auto 100%;
+}
+
+#verde, #azul{
+  transition: 4s;
+}

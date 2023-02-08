@@ -6,7 +6,8 @@ export default {
       "-webkit-mask-size": "contain",
       "-webkit-mask-repeat": "no-repeat",
       "-webkit-mask-position": "left center"
-    }
+    },
+    "animation": {"transition": "3s"}
   },
   theme: {
     extend: {

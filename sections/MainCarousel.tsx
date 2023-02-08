@@ -12,15 +12,16 @@ export interface Props{
 }
 
 export default function MainCarousel({content}: Props){
-    const id = useId();
 
+    const id = useId();
+    
     return(
         <section class="px-[10vw]">
             <div id={id} class="relative overflow-hidden">
                 <div class={`flex justify-between transition w-[${content.length * 100}%]`} data-slider-content>
                     {content.map((content, idx) => {
                         return(
-                            <a href={content.button.link} id={`${id}-${idx}`} class="flex flex-col md:flex-row  justify-between items-center w-[100%]">
+                            <a href={content.button.link} id={`${id}-${idx}`} class="flex flex-col md:flex-row  justify-between items-center w-[100%] mx-[1px]">
                                 <div class="w-full md:h-auto md:w-[40%] relative">
                                     <img src='/mascara.png' alt="" />
                                     <div id="mascara" class={`absolute w-full h-full top-0 left-0 bg-cover bg-center mask`} style={`background-image: url(${content.image})`}></div>
