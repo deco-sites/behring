@@ -49,7 +49,7 @@ export default function Footer({aboutUs, menu, logo} : Props){
                     }
                 </div>
                 <div class="mb-[30px] md:mb-0 w-[110px] md:w-[8%]">
-                    <img src={logo} alt="" />
+                    <img src={logo} alt="Logo Fundação" />
                 </div>
             </div>
         </footer>

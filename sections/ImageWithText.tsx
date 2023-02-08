@@ -36,6 +36,7 @@ export default function ImageWithText(
             src={image}
             width={200}
             height={40}
+            alt={title}
           />
         </picture>
       </div>
@@ -55,7 +56,7 @@ export default function ImageWithText(
           <a className="flex items-center bg-secondary px-[20px] rounded-[30px] uppercase text-white text-[12px] md:text-[16px] font-bold h-[40px] md:h-[50px]" href={button.link}>{button.text}</a>
         </div>
         <div class={`hidden h-[380px] w-[140px] md:block `}>
-          <img class="min-w-[70px] h-[380px] w-[140px]" src={imageDecoration} alt="" />
+          <img class="min-w-[70px] h-[380px] w-[140px]" src={imageDecoration} alt="Decoração - Fundação Behring" />
         </div> 
       </div> 
       <MidContentAnimation />

@@ -23,7 +23,7 @@ export default function MainCarousel({content}: Props){
                         return(
                             <a href={content.button.link} id={`${id}-${idx}`} class="flex flex-col md:flex-row  justify-between items-center w-[100%] mx-[1px]">
                                 <div class="w-full h-[93vw] md:h-auto md:w-[40%] relative">
-                                    <img src='/mascara.png' alt="" />
+                                    <img src='/mascara.png' alt="Mascara" />
                                     <div id="mascara" class={`absolute w-full h-full top-0 left-0 bg-cover bg-center mask`} style={`background-image: url(${content.image})`}></div>
                                 </div>
                                 <div class="w-full md:w-[30%] text-left md:text-right mt-[50px] md:mt-0">
