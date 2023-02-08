@@ -15,7 +15,7 @@ export default function MainCarousel({ content }: Props) {
   const id = useId();
 
   return (
-    <section class="px-[10vw] h-[145vw] md:h-auto pt-[120px]">
+    <section class="px-[10vw] h-[100vh] md:h-auto pt-[120px]">
       <div id={id} class="relative overflow-hidden">
         <div
           class={`flex justify-between transition w-[${content.length * 100}%]`}
@@ -38,10 +38,10 @@ export default function MainCarousel({ content }: Props) {
                   </div>
                 </div>
                 <div class="w-full md:w-[30%] text-left md:text-right mt-[50px] md:mt-0">
-                  <h2 class="text-primary text-[22px] md:text-[32px] font-semibold mb-5">
+                  <h2 class="text-primary text-[20px] md:text-[32px] font-semibold mb-5 leading-[1.1] md:leading-none">
                     {content.title}
                   </h2>
-                  <span class="block text-secondary uppercase font-semibold border-b-1 border-secondary w-max mr-auto md:ml-auto">
+                  <span class="block text-secondary text-[12px] md:text-[16px] uppercase font-semibold border-b-1 border-secondary w-max mr-auto md:mr-0 md:ml-auto">
                     {content.button.text}
                   </span>
                 </div>
@@ -49,14 +49,14 @@ export default function MainCarousel({ content }: Props) {
             );
           })}
         </div>
-        <div class="absolute w-0 z-30 flex -translate-x-1/2 left-0 bottom-[230px] md:left-auto md:bottom-[100px] md:right-[100px]">
+        <div class="absolute w-0 z-30 flex -translate-x-1/2 left-0 bottom-[105px] md:left-auto md:bottom-[100px] md:right-[100px]">
           {content.map((_, index) => (
             <button
               data-dot
               aria-label={`Focus slide carousel ${index}`}
               class={`p-1 focus:children:bg-secondary`}
             >
-              <div class="w-3 h-3 rounded-full bg-gray dark:bg-gray-800" />
+              <div class="w-[10px] h-[10px] rounded-full bg-gray dark:bg-gray-800" />
             </button>
           ))}
         </div>
@@ -65,9 +65,10 @@ export default function MainCarousel({ content }: Props) {
           items={content.length}
           delay={5 * 1000}
         />
-        <a
+      </div>
+      <a
           href="#atuacao"
-          class="block mb-[50px] mt-[20px] flex justify-center"
+          class="block mb-[20px] mt-[40px] flex justify-center absolute left-1/2 bottom-0"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -86,7 +87,6 @@ export default function MainCarousel({ content }: Props) {
             </path>
           </svg>
         </a>
-      </div>
     </section>
   );
 }
