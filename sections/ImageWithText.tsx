@@ -26,7 +26,7 @@ export default function ImageWithText(
       <div 
       id={imagePosition == "right" ? "image-right" : "image-left"}
       class={`animation max-w-[90vw] md:max-w-[55vw] flex items-center w-[90%] rounded-lg lg:w-full h-[380px] md:h-[550px] uw:h-[700px] overflow-hidden ${imagePosition == "right" ? "ml-auto rounded-tl-[400px] rounded-bl-[400px] mr-0 md:mr-[-60vw]" : "mr-auto rounded-tr-[400px] rounded-br-[400px] ml-0 md:ml-[-60vw]"}`}>
-        <picture class="inset-0 h-full flex justify-center items-center">
+        <picture class="inset-0 w-full h-full flex justify-center items-center">
           <source
             srcset={image}
           />
@@ -54,8 +54,8 @@ export default function ImageWithText(
           </p>
           <a className="flex items-center bg-secondary px-[20px] rounded-[30px] uppercase text-white text-[12px] md:text-[16px] font-bold h-[40px] md:h-[50px]" href={button.link}>{button.text}</a>
         </div>
-        <div class={`hidden md:block ${imagePosition == "right" ? "ml-6" : "mr-6"}`}>
-          <img class="h-[380px] w-[140px]" src={imageDecoration} alt="" />
+        <div class={`hidden h-[380px] w-[140px] md:block `}>
+          <img class="min-w-[70px] h-[380px] w-[140px]" src={imageDecoration} alt="" />
         </div> 
       </div> 
       <MidContentAnimation />

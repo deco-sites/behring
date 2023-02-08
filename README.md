@@ -1,4 +1,4 @@
-# Behring
+# Fundação Behring
 
 [Project Here](https://behring.deco.site/)
 

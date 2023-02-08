@@ -15,7 +15,7 @@ summary {
 }
 
 #gradient{
-  width: calc(100vw + 30vh);
+  width: calc(100vw + 50vh);
   height: 100%;
   color: #fff;
   transition: all 3.6s;
