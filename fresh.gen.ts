@@ -13,7 +13,6 @@ import * as $$1 from "./islands/LiveControls.tsx";
 import * as $$2 from "./islands/MidContentAnimation.tsx";
 import * as $$3 from "./islands/Slider.tsx";
 import * as $$$0 from "./sections/Footer.tsx";
-import * as $$$1 from "./sections/GetStarted.tsx";
 import * as $$$2 from "./sections/GradientSection.tsx";
 import * as $$$3 from "./sections/Head.tsx";
 import * as $$$4 from "./sections/Header.tsx";
@@ -38,7 +37,6 @@ const manifest: DecoManifest = {
   },
   sections: {
     "./sections/Footer.tsx": $$$0,
-    "./sections/GetStarted.tsx": $$$1,
     "./sections/GradientSection.tsx": $$$2,
     "./sections/Head.tsx": $$$3,
     "./sections/Header.tsx": $$$4,
@@ -114,23 +112,6 @@ const manifest: DecoManifest = {
           "menu",
           "logo",
         ],
-      },
-      "outputSchema": null,
-    },
-    "./sections/GetStarted.tsx": {
-      "inputSchema": {
-        "title": " Get Started",
-        "type": "object",
-        "properties": {
-          "enableInspectVSCode": {
-            "type": [
-              "boolean",
-              "null",
-            ],
-            "title": "Enable Inspect V S Code",
-          },
-        },
-        "required": [],
       },
       "outputSchema": null,
     },

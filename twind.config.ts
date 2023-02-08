@@ -1,13 +1,13 @@
 /** @type {import('$fresh/plugins/twind').Options} */
 export default {
-  plugins:{
-    "mask":{
-      "-webkit-mask-image": 'url(/mascara.png)',
+  plugins: {
+    "mask": {
+      "-webkit-mask-image": "url(/mascara.png)",
       "-webkit-mask-size": "contain",
       "-webkit-mask-repeat": "no-repeat",
-      "-webkit-mask-position": "left center"
+      "-webkit-mask-position": "left center",
     },
-    "animation": {"transition": "3s"}
+    "animation": { "transition": "3s" },
   },
   theme: {
     extend: {
@@ -17,7 +17,7 @@ export default {
         lg: "1024px",
         xl: "1280px",
         "2xl": "1536px",
-        "uw": "1900px"
+        "uw": "1900px",
       },
       colors: {
         primary: "#0E649F",
@@ -25,7 +25,7 @@ export default {
         transparent: "transparent",
         "white": "white",
         "gray": "#707070",
-        "black": "black"
+        "black": "black",
       },
     },
   },

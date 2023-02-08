@@ -21,7 +21,11 @@ export default function HeadComponent({
 }: Props) {
   return (
     <Head>
-      <link rel="preload" as="image" href="https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/500/c36b50eb-a9d9-4ff9-9695-5ce36d59b2d6" />
+      <link
+        rel="preload"
+        as="image"
+        href="https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/500/c36b50eb-a9d9-4ff9-9695-5ce36d59b2d6"
+      />
       <title>{title}</title>
       <meta name="theme-color" content={themeColor}></meta>
       <meta name="description" content={description} />
@@ -49,7 +53,11 @@ export default function HeadComponent({
       <link rel="manifest" href="/site.webmanifest"></link>
       <link rel="mask-icon" href="/safari-pinned-tab.svg" data-color="#003232">
       </link>
-      <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&amp;display=swap" rel="stylesheet"></link>
+      <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&amp;display=swap"
+        rel="stylesheet"
+      >
+      </link>
       <meta name="theme-color" content="#003232"></meta>
       <meta name="msapplication-TileColor" content="#003232"></meta>
       {styleUrls?.map((styleUrl: string) => (

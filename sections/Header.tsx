@@ -27,12 +27,14 @@ export default function GetStarted({ logo, menu }: Props) {
         </div>
         <nav class="hidden md:block">
           <ul class="flex text-[14px]">
-            {menu.map((menu,idx) => {
+            {menu.map((menu, idx) => {
               return (
                 <li class="hover:text-primary">
                   <a
                     href={menu.link}
-                    class={`block text-primary uppercase font-bold ml-[35px] ${idx == 0 ? "border-b-[3px]" : ""} hover:border-b-[3px] border-primary`}
+                    class={`block text-primary uppercase font-bold ml-[35px] ${
+                      idx == 0 ? "border-b-[3px]" : ""
+                    } hover:border-b-[3px] border-primary`}
                   >
                     {menu.text}
                   </a>
@@ -40,21 +42,33 @@ export default function GetStarted({ logo, menu }: Props) {
               );
             })}
             <li class="hover:text-primary flex items-center gap-1.5">
-                <a
-                href='/'
+              <a
+                href="/"
                 class="block text-gray uppercase ml-[35px] duration-150"
-                >
+              >
                 Alto Contraste
-                </a>
-                <svg className="opacity-50" xmlns="http://www.w3.org/2000/svg" width="14.038" height="14.038" viewBox="0 0 14.038 14.038"><path d="M9.59,1.928a7.019,7.019,0,1,0,7.019,7.019A7.019,7.019,0,0,0,9.59,1.928ZM4.325,8.947A5.264,5.264,0,0,1,9.59,3.683V14.211A5.264,5.264,0,0,1,4.325,8.947Z" transform="translate(-2.571 -1.928)"></path></svg>
+              </a>
+              <svg
+                className="opacity-50"
+                xmlns="http://www.w3.org/2000/svg"
+                width="14.038"
+                height="14.038"
+                viewBox="0 0 14.038 14.038"
+              >
+                <path
+                  d="M9.59,1.928a7.019,7.019,0,1,0,7.019,7.019A7.019,7.019,0,0,0,9.59,1.928ZM4.325,8.947A5.264,5.264,0,0,1,9.59,3.683V14.211A5.264,5.264,0,0,1,4.325,8.947Z"
+                  transform="translate(-2.571 -1.928)"
+                >
+                </path>
+              </svg>
             </li>
             <li class="hover:text-primary">
-                <a
-                href='/'
+              <a
+                href="/"
                 class="block text-primary uppercase font-bold ml-[35px] hover:border-b-[3px] border-primary"
-                >
+              >
                 EN
-                </a>
+              </a>
             </li>
           </ul>
         </nav>
@@ -81,30 +95,44 @@ export default function GetStarted({ logo, menu }: Props) {
                   <li class="mb-[30px]">
                     <a
                       href={menu.link}
-                      class={`block duration-150 text-[18px] text-center uppercase font-bold border-white ${idx == 0 ? "border-b-[3px]" : ""}`}
+                      class={`block duration-150 text-[18px] text-center uppercase font-bold border-white ${
+                        idx == 0 ? "border-b-[3px]" : ""
+                      }`}
                     >
                       {menu.text}
                     </a>
                   </li>
                 );
               })}
-                <li class="flex items-center gap-1.5 mb-[30px]">
-                    <a
-                    href='/'
-                    class="block text-white uppercase text-[18px]"
-                    >
-                    Alto Contraste
-                    </a>
-                    <svg className="opacity-50" xmlns="http://www.w3.org/2000/svg" width="14.038" height="14.038" viewBox="0 0 14.038 14.038"><path d="M9.59,1.928a7.019,7.019,0,1,0,7.019,7.019A7.019,7.019,0,0,0,9.59,1.928ZM4.325,8.947A5.264,5.264,0,0,1,9.59,3.683V14.211A5.264,5.264,0,0,1,4.325,8.947Z" transform="translate(-2.571 -1.928)"></path></svg>
-                </li>
-                <li class="mb-[30px]">
-                    <a
-                    href='/'
-                    class="block duration-150 text-[18px] text-center uppercase font-bold"
-                    >
-                    EN
-                   </a>
-                </li>
+              <li class="flex items-center gap-1.5 mb-[30px]">
+                <a
+                  href="/"
+                  class="block text-white uppercase text-[18px]"
+                >
+                  Alto Contraste
+                </a>
+                <svg
+                  className="opacity-50"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="14.038"
+                  height="14.038"
+                  viewBox="0 0 14.038 14.038"
+                >
+                  <path
+                    d="M9.59,1.928a7.019,7.019,0,1,0,7.019,7.019A7.019,7.019,0,0,0,9.59,1.928ZM4.325,8.947A5.264,5.264,0,0,1,9.59,3.683V14.211A5.264,5.264,0,0,1,4.325,8.947Z"
+                    transform="translate(-2.571 -1.928)"
+                  >
+                  </path>
+                </svg>
+              </li>
+              <li class="mb-[30px]">
+                <a
+                  href="/"
+                  class="block duration-150 text-[18px] text-center uppercase font-bold"
+                >
+                  EN
+                </a>
+              </li>
             </ul>
           </nav>
         </details>
