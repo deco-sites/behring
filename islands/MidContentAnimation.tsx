@@ -5,7 +5,6 @@ export default function GradientAnimation() {
 
   useEffect(() => {
     const onScroll = () => {
-      console.log(window.pageYOffset);
 
       if (window.pageYOffset >= 500 && !alreadyShowed) {
         const imageRight: HTMLElement = document.querySelector("#image-right")!;
