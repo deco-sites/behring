@@ -13,13 +13,13 @@ import * as $$1 from "./islands/LiveControls.tsx";
 import * as $$2 from "./islands/MidContentAnimation.tsx";
 import * as $$3 from "./islands/Slider.tsx";
 import * as $$$0 from "./sections/Footer.tsx";
-import * as $$$2 from "./sections/GradientSection.tsx";
-import * as $$$3 from "./sections/Head.tsx";
-import * as $$$4 from "./sections/Header.tsx";
-import * as $$$5 from "./sections/ImageWithText.tsx";
-import * as $$$6 from "./sections/MainCarousel.tsx";
-import * as $$$7 from "./sections/Markdown.tsx";
-import * as $$$8 from "./sections/QuillText.tsx";
+import * as $$$1 from "./sections/GradientSection.tsx";
+import * as $$$2 from "./sections/Head.tsx";
+import * as $$$3 from "./sections/Header.tsx";
+import * as $$$4 from "./sections/ImageWithText.tsx";
+import * as $$$5 from "./sections/MainCarousel.tsx";
+import * as $$$6 from "./sections/Markdown.tsx";
+import * as $$$7 from "./sections/QuillText.tsx";
 import * as $$$$0 from "./functions/LoadGitHubRaw.ts";
 
 const manifest: DecoManifest = {
@@ -37,13 +37,13 @@ const manifest: DecoManifest = {
   },
   sections: {
     "./sections/Footer.tsx": $$$0,
-    "./sections/GradientSection.tsx": $$$2,
-    "./sections/Head.tsx": $$$3,
-    "./sections/Header.tsx": $$$4,
-    "./sections/ImageWithText.tsx": $$$5,
-    "./sections/MainCarousel.tsx": $$$6,
-    "./sections/Markdown.tsx": $$$7,
-    "./sections/QuillText.tsx": $$$8,
+    "./sections/GradientSection.tsx": $$$1,
+    "./sections/Head.tsx": $$$2,
+    "./sections/Header.tsx": $$$3,
+    "./sections/ImageWithText.tsx": $$$4,
+    "./sections/MainCarousel.tsx": $$$5,
+    "./sections/Markdown.tsx": $$$6,
+    "./sections/QuillText.tsx": $$$7,
   },
   functions: { "./functions/LoadGitHubRaw.ts": $$$$0 },
   schemas: {

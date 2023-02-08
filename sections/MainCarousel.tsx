@@ -28,7 +28,7 @@ export default function MainCarousel({ content }: Props) {
                 id={`${id}-${idx}`}
                 class="flex flex-col md:flex-row  justify-between items-center w-[100%] mx-[1px]"
               >
-                <div class="w-full h-[93vw] md:h-auto md:w-[40%] relative">
+                <div class="w-full md:h-auto md:w-[40%] relative">
                   <img src="/mascara.png" alt="Mascara" />
                   <div
                     id="mascara"
