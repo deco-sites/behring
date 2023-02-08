@@ -68,7 +68,7 @@ export default function MainCarousel({ content }: Props) {
       </div>
       <a
           href="#atuacao"
-          class="block mb-[20px] mt-[40px] flex justify-center absolute left-1/2 bottom-0"
+          class="block mb-[20px] mt-[40px] flex justify-center absolute md:static left-1/2 bottom-0"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
